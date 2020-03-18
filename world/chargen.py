@@ -68,11 +68,9 @@ article_re = re.compile(r'^an?\s', re.IGNORECASE)
 def menunode_welcome_archetypes(caller):
     """Starting page and Archetype listing."""
     text = dedent("""\
-        |wWelcome to |mAinneve|w, the example game for |yEvennia|w.|n
+        |wWelcome to |mDimensions RPG|w, a MUSH/RPG chat built with |yEvennia|w.|n
 
-        To begin, select an |cArchetype|n. There are three base
-        archetypes to choose from, plus three dual archetypes which
-        combine the strengths and weaknesses of two archetypes into one.
+        To begin, select an |cArchetype|n.
 
         Select an Archetype by number below to view its details, or |whelp|n
         at any time for more info.
@@ -538,7 +536,7 @@ def menunode_confirm(caller, raw_string):
             item.delete()
 
     options = [{"key": ("Yes", "ye", "y"),
-                "desc": "Save your character and enter |mAinneve|n",
+                "desc": "Save your character and enter |mthe Dimensions|n",
                 "goto": "menunode_end"},
                {"key": ("No", "n"),
                 "desc": "Start over from the beginning",
@@ -553,7 +551,7 @@ def menunode_end(caller, raw_string):
     text = dedent("""
         Congratulations!
 
-        You have completed |mAinneve|n character creation.
+        You have completed |mDimensions RPG|n character creation.
         This could be some more informative message eventually...""")
     return text, None
 

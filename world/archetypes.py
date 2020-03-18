@@ -56,8 +56,7 @@ class ArchetypeException(Exception):
         self.msg = msg
 
 BASE_ARCHETYPES = ('Arcanist', 'Scout', 'Warrior')
-DUAL_ARCHETYPES = ('Warrior-Scout', 'Warrior-Arcanist', 'Arcanist-Scout')
-VALID_ARCHETYPES = BASE_ARCHETYPES + DUAL_ARCHETYPES
+VALID_ARCHETYPES = BASE_ARCHETYPES
 
 PRIMARY_TRAITS = ('STR', 'PER', 'INT', 'DEX', 'CHA', 'VIT', 'MAG')
 SECONDARY_TRAITS = ('HP', 'SP', 'BM', 'WM')
@@ -204,44 +203,9 @@ def load_archetype(name):
             raise ArchetypeException("Invalid archetype specified.")
     return archetype
 
-def _make_dual(a, b):
-    """Creates a dual archetype class out of two basic `Archetype` classes.
-
-    Args:
-        a (Archetype): first component Archetype
-        b (Archetype): second component Archetype
-
-    Returns:
-        (Archetype): dual Archetype class
-    """
-    if '-' in a.name or '-' in b.name:
-        raise ArchetypeException('Cannot create Triple-Archetype')
-    if a.name == b.name:
-        raise ArchetypeException('Cannot create dual of the same Archetype')
-
-    names = {
-        frozenset(['Warrior', 'Scout']): 'Warrior-Scout',
-        frozenset(['Warrior', 'Arcanist']): 'Warrior-Arcanist',
-        frozenset(['Scout', 'Arcanist']): 'Arcanist-Scout'
-    }
-    dual = Archetype()
-    for key, trait in dual.traits.items():
-        trait['base'] = (a.traits.get(key, trait)['base'] +
-                         b.traits.get(key, trait)['base']) // 2
-        trait['mod'] = (a.traits.get(key, trait)['mod'] +
-                        b.traits.get(key, trait)['mod']) // 2
-    dual.health_roll = min(a.health_roll, b.health_roll, key=roll_max)
-    dual.name = names[frozenset([a.name, b.name])]
-    desc = "|c{}s|n have a blend of the qualities of both component archetypes.\n\n"
-    desc += a._desc + '\n\n' + b._desc
-    dual.desc = desc.format(dual.name)
-    dual.__class__.__name__ = dual.name.replace('-', '')
-    return dual
 
 
 # Archetype Classes
-
-
 class Archetype(object):
     """Base archetype class containing default values for all traits."""
     def __init__(self):

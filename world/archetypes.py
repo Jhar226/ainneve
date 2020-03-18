@@ -57,7 +57,7 @@ class ArchetypeException(Exception):
 
 BASE_ARCHETYPES = ('Crusader', 'Bard', 'Soldier', 'Mage', 'Rogue', 'Priest')
 DUAL_ARCHETYPES = ('Warrior-Scout', 'Warrior-Arcanist', 'Arcanist-Scout')
-VALID_ARCHETYPES = BASE_ARCHETYPES
+VALID_ARCHETYPES = BASE_ARCHETYPES + DUAL_ARCHETYPES
 
 PRIMARY_TRAITS = ('STR', 'PER', 'INT', 'DEX', 'CHA', 'VIT', 'MAG')
 SECONDARY_TRAITS = ('HP', 'SP', 'BM', 'WM')

@@ -55,8 +55,8 @@ class ArchetypeException(Exception):
     def __init__(self, msg):
         self.msg = msg
 
-BASE_ARCHETYPES = ('Arcanist', 'Scout', 'Soldier')
-DUAL_ARCHETYPES = ('Soldier-Scout', 'Soldier-Arcanist', 'Arcanist-Scout')
+BASE_ARCHETYPES = ('Arcanist', 'Scout', 'Warrior')
+DUAL_ARCHETYPES = ('Warrior-Scout', 'Warrior-Arcanist', 'Arcanist-Scout')
 VALID_ARCHETYPES = BASE_ARCHETYPES + DUAL_ARCHETYPES
 
 PRIMARY_TRAITS = ('STR', 'PER', 'INT', 'DEX', 'CHA', 'VIT', 'MAG')
@@ -373,11 +373,11 @@ class Scout(Archetype):
         self.health_roll = '1d6'
 
 
-class Soldier(Archetype):
-    """Represents the Soldier archetype."""
+class Warrior(Archetype):
+    """Represents the Warrior archetype."""
     def __init__(self):
-        super(Soldier, self).__init__()
-        self.name = 'Soldier'
+        super(Warrior, self).__init__()
+        self.name = 'Warrior'
         self.desc = fill(
             "|cWarriors|n are individual soldiers, mercenaries, bounty "
             "hunters or various types of combatants. They believe no "

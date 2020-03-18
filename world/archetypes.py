@@ -55,7 +55,7 @@ class ArchetypeException(Exception):
     def __init__(self, msg):
         self.msg = msg
 
-BASE_ARCHETYPES = ('Bard', 'Crusader', 'Soldier', 'Mage')
+BASE_ARCHETYPES = ('Crusader', 'Bard', 'Soldier', 'Mage', 'Priest', 'Rogue')
 VALID_ARCHETYPES = BASE_ARCHETYPES
 
 PRIMARY_TRAITS = ('STR', 'PER', 'INT', 'DEX', 'CHA', 'VIT', 'MAG')
@@ -203,6 +203,8 @@ def load_archetype(name):
             raise ArchetypeException("Invalid archetype specified.")
     return archetype
 
+
+
 # Archetype Classes
 class Archetype(object):
     """Base archetype class containing default values for all traits."""
@@ -291,35 +293,128 @@ class Archetype(object):
                     trait['name'], trait['base'])
 
 
+
 class Bard(Archetype):
-    """Represents the Arcanist archetype."""
+    """Represents the Bard class."""
     def __init__(self):
         super(Bard, self).__init__()
         self.name = 'Bard'
         self.desc = fill(
-            "|cArcanists|n harness mysterious, arcane powers they pull from "
-            "the ether. These magic and paranormal wielders employ occult "
-            "powers that only they truly understand."
+            "|Bards|n use their music and charms to get what they want, "
+            "harnessing powers which come with being a suave and famous "
+            "individual."
         )
 
         # set starting trait values
         self.traits['PER']['base'] = 4
-        self.traits['INT']['base'] = 6
-        self.traits['CHA']['base'] = 4
+        self.traits['INT']['base'] = 4
+        self.traits['CHA']['base'] = 6
         self.traits['MAG']['base'] = 6
         self.traits['SP']['mod'] = -2
-        self.traits['MV']['base'] = 7
+        self.traits['MV']['base'] = 5
 
-        self.health_roll = '1d6-1'
+        self.health_roll = '1d8+6'
+
 
 
 class Crusader(Archetype):
-    """Represents the Scout archetype."""
+    """Represents the Crusader class."""
     def __init__(self):
         super(Crusader, self).__init__()
         self.name = 'Crusader'
         self.desc = fill(
-            "|cScouts|n are highly intelligent and well-trained individuals "
+            "|Crusaders|n are utilizers of white magic and warfare, "
+            "capable of entering the batllefield without fear and conquering "
+            "all challenges laid before them in the name of their deity."
+        )
+
+        # set starting trait values
+        self.traits['STR']['base'] = 6
+        self.traits['DEX']['base'] = 4
+        self.traits['CHA']['base'] = 6
+        self.traits['MAG']['base'] = 5
+        self.traits['VIT']['base'] = 4
+        self.traits['PP']['base'] = 1
+        self.traits['MV']['base'] = 5
+
+        self.health_roll = '1d10+10'
+
+
+
+class Soldier(Archetype):
+    """Represents the Soldier class."""
+    def __init__(self):
+        super(Soldier, self).__init__()
+        self.name = 'Soldier'
+        self.desc = fill(
+            "|Soldiers|n come in many shapes and sizes - being one of if not "
+            "the most versatile class in terms of performance. Soldiers account "
+            "for everything from bounty hunters, mercenaries, and professional soldiers."
+        )
+
+        # set starting trait values
+        self.traits['STR']['base'] = 6
+        self.traits['DEX']['base'] = 6
+        self.traits['VIT']['base'] = 6
+        self.traits['REFL']['mod'] = 2
+        self.traits['PP']['base'] = 3
+        self.traits['MV']['base'] = 6
+
+        self.health_roll = '1d10+12'
+
+
+class Mage(Archetype):
+    """Represents the Mage class."""
+    def __init__(self):
+        super(Soldier, self).__init__()
+        self.name = 'Mage'
+        self.desc = fill(
+            "|Mages|n use their arcane arts for some purposes. They are "
+            "magic for magic sake come on guys. "
+            "Magic!"
+        )
+
+        # set starting trait values
+        self.traits['INT']['base'] = 6
+        self.traits['CHA']['base'] = 6
+        self.traits['MAG']['base'] = 6
+        self.traits['BM']['mod'] = 2
+        self.traits['WILL']['mod'] = 2
+        self.traits['SP']['mod'] = -2
+        self.traits['MV']['base'] = 5
+
+        self.health_roll = '1d6+6'
+
+
+class Priest(Archetype):
+    """Represents the Priest class."""
+    def __init__(self):
+        super(Soldier, self).__init__()
+        self.name = 'Priest'
+        self.desc = fill(
+            "|Priests|n are not in fact evil "
+            "but instead use healing magic and pray to a deity or concept. "
+            "Bottom text."
+        )
+
+        # set starting trait values
+        self.traits['PER']['base'] = 6
+        self.traits['CHA']['base'] = 6
+        self.traits['MAG']['base'] = 6
+        self.traits['WM']['mod'] = 2
+        self.traits['WILL']['mod'] = 1
+        self.traits['MV']['base'] = 5
+
+        self.health_roll = '1d6+6'
+
+
+class Rogue(Archetype):
+    """Represents the Rogue archetype."""
+    def __init__(self):
+        super(Rogue, self).__init__()
+        self.name = 'Rogue'
+        self.desc = fill(
+            "|Rogues|n are highly intelligent and well-trained individuals "
             "who prefer to work their secret craft in the shadows where "
             "they remain unseen. Scouts go by many names such as thieves, "
             "rogues and rangers but little is known by general society of "
@@ -327,56 +422,10 @@ class Crusader(Archetype):
         )
 
         # set starting trait values
-        self.traits['STR']['base'] = 4
         self.traits['PER']['base'] = 6
         self.traits['INT']['base'] = 6
-        self.traits['DEX']['base'] = 4
+        self.traits['DEX']['base'] = 6
+        self.traits['REFL']['mod'] = 2
+        self.traits['MV']['base'] = 6
 
-        self.health_roll = '1d6'
-
-
-class Soldier(Archetype):
-    """Represents the Warrior archetype."""
-    def __init__(self):
-        super(Soldier, self).__init__()
-        self.name = 'Soldier'
-        self.desc = fill(
-            "|cWarriors|n are individual soldiers, mercenaries, bounty "
-            "hunters or various types of combatants. They believe no "
-            "problem can't be solved with their melee weapon and choose "
-            "strength as their highest primary trait."
-        )
-
-        # set starting trait values
-        self.traits['STR']['base'] = 6
-        self.traits['DEX']['base'] = 4
-        self.traits['CHA']['base'] = 4
-        self.traits['VIT']['base'] = 6
-        self.traits['REFL']['mod'] = -2
-        self.traits['PP']['base'] = 2
-        self.traits['MV']['base'] = 5
-
-        self.health_roll = '1d6+1'
-
-class Mage(Archetype):
-    """Represents the Warrior archetype."""
-    def __init__(self):
-        super(Mage, self).__init__()
-        self.name = 'Mage'
-        self.desc = fill(
-            "|cWarriors|n are individual soldiers, mercenaries, bounty "
-            "hunters or various types of combatants. They believe no "
-            "problem can't be solved with their melee weapon and choose "
-            "strength as their highest primary trait."
-        )
-
-        # set starting trait values
-        self.traits['STR']['base'] = 6
-        self.traits['DEX']['base'] = 4
-        self.traits['CHA']['base'] = 4
-        self.traits['VIT']['base'] = 6
-        self.traits['REFL']['mod'] = -2
-        self.traits['PP']['base'] = 2
-        self.traits['MV']['base'] = 5
-
-        self.health_roll = '1d6+1'
+        self.health_roll = '1d8+8'

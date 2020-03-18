@@ -353,7 +353,6 @@ class Bard(Archetype):
 
 
     class Crusader(Archetype):
-    """Represents the Crusader class."""
     def __init__(self):
         super(Crusader, self).__init__()
         self.name = 'Crusader'

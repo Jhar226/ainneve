@@ -395,3 +395,140 @@ class Warrior(Archetype):
         self.traits['MV']['base'] = 5
 
         self.health_roll = '1d6+1'
+
+
+class Bard(Archetype):
+    """Represents the Bard class."""
+    def __init__(self):
+        super(Bard, self).__init__()
+        self.name = 'Bard'
+        self.desc = fill(
+            "|Bards|n use their music and charms to get what they want, "
+            "harnessing powers which come with being a suave and famous "
+            "individual."
+        )
+
+        # set starting trait values
+        self.traits['PER']['base'] = 4
+        self.traits['INT']['base'] = 4
+        self.traits['CHA']['base'] = 6
+        self.traits['MAG']['base'] = 6
+        self.traits['SP']['mod'] = -2
+        self.traits['MV']['base'] = 5
+
+        self.health_roll = '1d8+|w{VIT}'
+
+
+
+    class Crusader(Archetype):
+    """Represents the Crusader class."""
+    def __init__(self):
+        super(Crusader, self).__init__()
+        self.name = 'Crusader'
+        self.desc = fill(
+            "|Crusaders|n are utilizers of white magic and warfare, "
+            "capable of entering the batllefield without fear and conquering "
+            "all challenges laid before them in the name of their deity."
+        )
+
+        # set starting trait values
+        self.traits['STR']['base'] = 6
+        self.traits['DEX']['base'] = 4
+        self.traits['CHA']['base'] = 6
+        self.traits['MAG']['base'] = 5
+        self.traits['VIT']['base'] = 4
+        self.traits['PP']['base'] = 1
+        self.traits['MV']['base'] = 5
+
+        self.health_roll = '1d10+|w{VIT}'
+
+
+
+    class Soldier(Archetype):
+    """Represents the Soldier class."""
+    def __init__(self):
+        super(Soldier, self).__init__()
+        self.name = 'Soldier'
+        self.desc = fill(
+            "|Soldiers|n come in many shapes and sizes - being one of if not "
+            "the most versatile class in terms of performance. Soldiers account "
+            "for everything from bounty hunters, mercenaries, and professional soldiers."
+        )
+
+        # set starting trait values
+        self.traits['STR']['base'] = 6
+        self.traits['DEX']['base'] = 6
+        self.traits['VIT']['base'] = 6
+        self.traits['REFL']['mod'] = 2
+        self.traits['PP']['base'] = 3
+        self.traits['MV']['base'] = 6
+
+        self.health_roll = '1d10+|w{VIT}'
+
+
+    class Mage(Archetype):
+    """Represents the Mage class."""
+    def __init__(self):
+        super(Soldier, self).__init__()
+        self.name = 'Mage'
+        self.desc = fill(
+            "|Mages|n use their arcane arts for some purposes. They are "
+            "magic for magic sake come on guys. "
+            "Magic!"
+        )
+
+        # set starting trait values
+        self.traits['INT']['base'] = 6
+        self.traits['CHA']['base'] = 6
+        self.traits['MAG']['base'] = 6
+        self.traits['BM']['mod'] = 2
+        self.traits['WILL']['mod'] = 2
+        self.traits['SP']['mod'] = -2
+        self.traits['MV']['base'] = 5
+
+        self.health_roll = '1d6+|w{VIT}'
+
+
+    class Priest(Archetype):
+    """Represents the Priest class."""
+    def __init__(self):
+        super(Soldier, self).__init__()
+        self.name = 'Priest'
+        self.desc = fill(
+            "|Priests|n are not in fact evil "
+            "but instead use healing magic and pray to a deity or concept. "
+            "Bottom text."
+        )
+
+        # set starting trait values
+        self.traits['PER']['base'] = 6
+        self.traits['CHA']['base'] = 6
+        self.traits['MAG']['base'] = 6
+        self.traits['WM']['mod'] = 2
+        self.traits['WILL']['mod'] = 1
+        self.traits['MV']['base'] = 5
+
+        self.health_roll = '1d6+|w{VIT}'
+
+
+class Rogue(Archetype):
+    """Represents the Rogue archetype."""
+    def __init__(self):
+        super(Rogue, self).__init__()
+        self.name = 'Rogue'
+        self.desc = fill(
+            "|Rogues|n are highly intelligent and well-trained individuals "
+            "who prefer to work their secret craft in the shadows where "
+            "they remain unseen. Scouts go by many names such as thieves, "
+            "rogues and rangers but little is known by general society of "
+            "their closely guarded secrets. "
+        )
+
+        # set starting trait values
+        self.traits['PER']['base'] = 6
+        self.traits['INT']['base'] = 6
+        self.traits['DEX']['base'] = 6
+        self.traits['REFL']['mod'] = 2
+        self.traits['MV']['base'] = 6
+
+        self.health_roll = '1d8+|w{VIT}'

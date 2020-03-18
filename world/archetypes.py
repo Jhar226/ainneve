@@ -55,7 +55,7 @@ class ArchetypeException(Exception):
     def __init__(self, msg):
         self.msg = msg
 
-BASE_ARCHETYPES = ('Bard', 'Crusader', 'Soldier')
+BASE_ARCHETYPES = ('Bard', 'Crusader', 'Soldier', 'Mage')
 VALID_ARCHETYPES = BASE_ARCHETYPES
 
 PRIMARY_TRAITS = ('STR', 'PER', 'INT', 'DEX', 'CHA', 'VIT', 'MAG')
@@ -340,6 +340,29 @@ class Soldier(Archetype):
     def __init__(self):
         super(Soldier, self).__init__()
         self.name = 'Soldier'
+        self.desc = fill(
+            "|cWarriors|n are individual soldiers, mercenaries, bounty "
+            "hunters or various types of combatants. They believe no "
+            "problem can't be solved with their melee weapon and choose "
+            "strength as their highest primary trait."
+        )
+
+        # set starting trait values
+        self.traits['STR']['base'] = 6
+        self.traits['DEX']['base'] = 4
+        self.traits['CHA']['base'] = 4
+        self.traits['VIT']['base'] = 6
+        self.traits['REFL']['mod'] = -2
+        self.traits['PP']['base'] = 2
+        self.traits['MV']['base'] = 5
+
+        self.health_roll = '1d6+1'
+
+class Mage(Archetype):
+    """Represents the Warrior archetype."""
+    def __init__(self):
+        super(Mage, self).__init__()
+        self.name = 'Mage'
         self.desc = fill(
             "|cWarriors|n are individual soldiers, mercenaries, bounty "
             "hunters or various types of combatants. They believe no "

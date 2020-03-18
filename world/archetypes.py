@@ -56,7 +56,7 @@ class ArchetypeException(Exception):
         self.msg = msg
 
 BASE_ARCHETYPES = ('Martial Artist', 'Soldier', 'Crusader', 'Bard', 'Rogue', 'Mage', 'Priest', 'Druid')
-"""DUAL_ARCHETYPES = ('Warrior-Scout', 'Warrior-Arcanist', 'Arcanist-Scout')""""
+DUAL_ARCHETYPES = ('Warrior-Scout', 'Warrior-Arcanist', 'Arcanist-Scout')
 VALID_ARCHETYPES = BASE_ARCHETYPES
 
 PRIMARY_TRAITS = ('STR', 'PER', 'INT', 'DEX', 'CHA', 'VIT', 'MAG')

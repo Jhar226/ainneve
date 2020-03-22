@@ -32,7 +32,7 @@ from evennia.settings_default import *
 ######################################################################
 
 # This is the name of your game. Make it catchy!
-SERVERNAME = "Ainneve"
+SERVERNAME = "Dimensions RPG Chat"
 
 # Server ports. If enabled and marked as "visible", the port
 # should be visible to the outside world on a production server.
@@ -81,24 +81,24 @@ BASE_BATCHPROCESS_PATHS = ['world.content']
 GAME_INDEX_LISTING = {
     'game_status': 'pre-alpha',
     # Optional, comment out or remove if N/A
-    'game_website': 'http://ainneve.evennia.com',
-    'short_description': 'This is the example game for Evennia.',
+    'game_website': 'http://http://dimensions-rpg.xyz/',
+    'short_description': 'Dimensions RPG is a combo MUD and Roleplaying Game Chat.',
     # Optional but highly recommended. Markdown is supported.
     'long_description': (
-        "Launched in the summer of 2015 by the Evennia community, this project "
-        "aims to be a full example implementation of a MUD-style RP-focused game.\n\n"
-        "It is based on the [Open Adventure](https://github.com/openadventure/Open-Adventure/blob/master/rulebook/biem/openadventure_basic.pdf) "
-        "table-top game system, is fantasy-themed, and features turn-based combat.\n\n"
+        "This is the roleplaying game to-be, Dimensions RPG Chat. It is forged by "
+        "ColeArkenach; this is a combination of a MUD, MUSH, and RP Chat.\n\n"
+        "It is roughly based on [The Fade Tabletop 2e](https://sites.google.com/site/tftsrd/home) "
+        "table-top game system, is dark fantasy-themed, and features turn-based combat.\n\n"
         "It still a work in progress, and basic game systems are still being built. "
         "However, we welcome any who are interested in testing things out and giving "
         "feedback."
     ),
-    'listing_contact': 'fened78@gmail.com',
+    'listing_contact': 'colearkenach@gmail.com',
     # At minimum, specify this or the web_client_url options. Both is fine, too.
-    'telnet_hostname': 'ainneve.evennia.com',
+    'telnet_hostname': 'http://dimensions-rpg.xyz/',
     'telnet_port': 4000,
     # At minimum, specify this or the telnet_* options. Both is fine, too.
-    'web_client_url': 'http://ainneve.evennia.com:8000/webclient',
+    'web_client_url': 'http://http://dimensions-rpg.xyz:8000/webclient',
 }
 ######################################################################
 # Settings given in secret_settings.py override those in this file.

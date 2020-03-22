@@ -21,11 +21,12 @@ MSSPTable =  {
 
     # Generic
 
-    "CRAWL DELAY":        "-1",     # limit how often crawler updates the listing. -1 for no limit
+    "CRAWL DELAY":        "-1",                             # limit how often crawler updates the listing. -1 for no limit
 
-    "HOSTNAME":           "",       # current or new hostname
-    "PORT":               ["4000"], # most important port should be last in list
+    "HOSTNAME":           "",                               # current or new hostname
+    "PORT":               ["4000"],                         # most important port should be last in list
     "CODEBASE":           "Evennia",
+<<<<<<< HEAD
     "CONTACT":            "colearkenach@gmail.com",       # email for contacting the mud
     "CREATED":            "2020",       # year MUD was created
     "ICON":               "",       # url to icon 32x32 or larger; <32kb.
@@ -34,18 +35,37 @@ MSSPTable =  {
     "LOCATION":           "USA",       # full English name of server country
     "MINIMUM AGE":        "13",      # set to 0 if not applicable
     "WEBSITE":            "https://dimensions-rpg.xyz/",
+=======
+    "CONTACT":            "colearkenach@gmail.com",         # email for contacting the mud
+    "CREATED":            "2020",                           # year MUD was created
+    "ICON":               "",                               # url to icon 32x32 or larger; <32kb.
+    "IP":                 "98.117.68.88",                               # current or new IP address
+    "LANGUAGE":           "English",                        # name of language used, e.g. English
+    "LOCATION":           "United States",                  # full English name of server country
+    "MINIMUM AGE":        "13",                             # set to 0 if not applicable
+    "WEBSITE":            "http://dimensions-rpg.xyz/",
+>>>>>>> parent of 99dc6b0... Revert "de"
 
     # Categorisation
 
     "FAMILY":             "Custom", # evennia goes under 'Custom'
+<<<<<<< HEAD
     "GENRE":              "Fantasy",   # Adult, Fantasy, Historical, Horror, Modern, None, or Science Fiction
     "GAMEPLAY":           "Adventure",       # Adventure, Educational, Hack and Slash, None,
                                       # Player versus Player, Player versus Environment,
                                       # Roleplaying, Simulation, Social or Strategy
     "STATUS":             "Alpha",  # Alpha, Closed Beta, Open Beta, Live
     "GAMESYSTEM":         "Custom", # D&D, d20 System, World of Darkness, etc. Use Custom if homebrew
+=======
+    "GENRE":              "Dark Fantasy",   # Adult, Fantasy, Historical, Horror, Modern, None, or Science Fiction
+    "GAMEPLAY":           "Adventure",       # Adventure, Educational, Hack and Slash, None,
+                                      # Player versus Player, Player versus Environment,
+                                      # Roleplaying, Simulation, Social or Strategy
+    "STATUS":             "Pre-Alpha",  # Alpha, Closed Beta, Open Beta, Live
+    "GAMESYSTEM":         "The Fade Tabletop", # D&D, d20 System, World of Darkness, etc. Use Custom if homebrew
+>>>>>>> parent of 99dc6b0... Revert "de"
     "INTERMUD":           "IMC2",   # evennia supports IMC2.
-    "SUBGENRE":           "None",   # LASG, Medieval Fantasy, World War II, Frankenstein,
+    "SUBGENRE":           "Multiversal",   # LASG, Medieval Fantasy, World War II, Frankenstein,
                                       # Cyberpunk, Dragonlance, etc. Or None if not available.
 
     # World
@@ -99,18 +119,18 @@ MSSPTable =  {
 
     "ADULT MATERIAL":     "0",
     "MULTICLASSING":      "0",
-    "NEWBIE FRIENDLY":    "0",
+    "NEWBIE FRIENDLY":    "1",
     "PLAYER CITIES":      "0",
     "PLAYER CLANS":       "0",
     "PLAYER CRAFTING":    "0",
     "PLAYER GUILDS":      "0",
-    "EQUIPMENT SYSTEM":   "None",  # "None", "Level", "Skill", "Both"
-    "MULTIPLAYING":       "None",  # "None", "Restricted", "Full"
-    "PLAYERKILLING":      "None",  # "None", "Restricted", "Full"
-    "QUEST SYSTEM":       "None",  # "None", "Immortal Run", "Automated", "Integrated"
-    "ROLEPLAYING":        "None",  # "None", "Accepted", "Encouraged", "Enforced"
-    "TRAINING SYSTEM":    "None",  # "None", "Level", "Skill", "Both"
-    "WORLD ORIGINALITY":  "None",  # "All Stock", "Mostly Stock", "Mostly Original", "All Original"
+    "EQUIPMENT SYSTEM":   "Both",  # "None", "Level", "Skill", "Both"
+    "MULTIPLAYING":       "Full",  # "None", "Restricted", "Full"
+    "PLAYERKILLING":      "Full",  # "None", "Restricted", "Full"
+    "QUEST SYSTEM":       "Integrated",  # "None", "Immortal Run", "Automated", "Integrated"
+    "ROLEPLAYING":        "Encouraged",  # "None", "Accepted", "Encouraged", "Enforced"
+    "TRAINING SYSTEM":    "Both",  # "None", "Level", "Skill", "Both"
+    "WORLD ORIGINALITY":  "Mostly Original",  # "All Stock", "Mostly Stock", "Mostly Original", "All Original"
 
     # Protocols (only change if you added/removed something manually)
 

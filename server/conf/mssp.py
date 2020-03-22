@@ -31,7 +31,7 @@ MSSPTable =  {
     "ICON":               "",       # url to icon 32x32 or larger; <32kb.
     "IP":                 "192.168.1.17",       # current or new IP address
     "LANGUAGE":           "English",       # name of language used, e.g. English
-    "LOCATION":           "United States",       # full English name of server country
+    "LOCATION":           "USA",       # full English name of server country
     "MINIMUM AGE":        "13",      # set to 0 if not applicable
     "WEBSITE":            "https://dimensions-rpg.xyz/",
 

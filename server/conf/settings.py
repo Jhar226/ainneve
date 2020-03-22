@@ -98,7 +98,7 @@ GAME_INDEX_LISTING = {
     'telnet_hostname': 'http://dimensions-rpg.xyz/',
     'telnet_port': 6000,
     # At minimum, specify this or the telnet_* options. Both is fine, too.
-    'web_client_url': 'http://http://dimensions-rpg.xyz/webclient',
+    'web_client_url': 'http://dimensions-rpg.xyz/webclient',
 }
 ######################################################################
 # Settings given in secret_settings.py override those in this file.

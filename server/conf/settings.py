@@ -42,7 +42,7 @@ IRC_ENABLED = True
 IDLE_TIMEOUT = 86400
 # Telnet ports. Visible.
 TELNET_ENABLED = True
-TELNET_PORTS = [4000]
+TELNET_PORTS = [6000]
 # (proxy, internal). Only proxy should be visible.
 WEBSERVER_ENABLED = True
 WEBSERVER_PORTS = [(4001, 4002)]
@@ -96,9 +96,9 @@ GAME_INDEX_LISTING = {
     'listing_contact': 'colearkenach@gmail.com',
     # At minimum, specify this or the web_client_url options. Both is fine, too.
     'telnet_hostname': 'http://dimensions-rpg.xyz/',
-    'telnet_port': 4000,
+    'telnet_port': 6000,
     # At minimum, specify this or the telnet_* options. Both is fine, too.
-    'web_client_url': 'http://http://dimensions-rpg.xyz:8000/webclient',
+    'web_client_url': 'http://http://dimensions-rpg.xyz/webclient',
 }
 ######################################################################
 # Settings given in secret_settings.py override those in this file.

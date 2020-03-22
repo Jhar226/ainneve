@@ -24,12 +24,12 @@ MSSPTable =  {
     "CRAWL DELAY":        "-1",                             # limit how often crawler updates the listing. -1 for no limit
 
     "HOSTNAME":           "",                               # current or new hostname
-    "PORT":               ["4000"],                         # most important port should be last in list
+    "PORT":               ["6000"],                         # most important port should be last in list
     "CODEBASE":           "Evennia",
     "CONTACT":            "colearkenach@gmail.com",       # email for contacting the mud
     "CREATED":            "2020",       # year MUD was created
     "ICON":               "",       # url to icon 32x32 or larger; <32kb.
-    "IP":                 "192.168.1.17",       # current or new IP address
+    "IP":                 "",       # current or new IP address
     "LANGUAGE":           "English",       # name of language used, e.g. English
     "LOCATION":           "USA",       # full English name of server country
     "MINIMUM AGE":        "13",      # set to 0 if not applicable

@@ -19,7 +19,7 @@ from evennia.utils import search, dedent
 def at_initial_setup():
     limbo = search.objects('Limbo')[0]
     limbo.db.desc = dedent("""
-        Welcome to |mAinneve|n, the example game for Evennia!
+        Welcome to |mDimensions RPG|n, the MUD and RPG Chat service!
 
         The project is still in early development, and we welcome your contributions.
 

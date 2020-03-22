@@ -17,7 +17,7 @@ MSSPTable =  {
 
     # Required fieldss
 
-    "NAME":               "Evennia",
+    "NAME":               "Dimensions RPG Chat",
 
     # Generic
 
@@ -26,23 +26,23 @@ MSSPTable =  {
     "HOSTNAME":           "",       # current or new hostname
     "PORT":               ["4000"], # most important port should be last in list
     "CODEBASE":           "Evennia",
-    "CONTACT":            "",       # email for contacting the mud
-    "CREATED":            "",       # year MUD was created
+    "CONTACT":            "colearkenach@gmail.com",       # email for contacting the mud
+    "CREATED":            "2020",       # year MUD was created
     "ICON":               "",       # url to icon 32x32 or larger; <32kb.
-    "IP":                 "",       # current or new IP address
-    "LANGUAGE":           "",       # name of language used, e.g. English
-    "LOCATION":           "",       # full English name of server country
-    "MINIMUM AGE":        "0",      # set to 0 if not applicable
-    "WEBSITE":            "www.evennia.com",
+    "IP":                 "192.168.1.17",       # current or new IP address
+    "LANGUAGE":           "English",       # name of language used, e.g. English
+    "LOCATION":           "United States",       # full English name of server country
+    "MINIMUM AGE":        "13",      # set to 0 if not applicable
+    "WEBSITE":            "https://dimensions-rpg.xyz/",
 
     # Categorisation
 
     "FAMILY":             "Custom", # evennia goes under 'Custom'
-    "GENRE":              "None",   # Adult, Fantasy, Historical, Horror, Modern, None, or Science Fiction
-    "GAMEPLAY":           "",       # Adventure, Educational, Hack and Slash, None,
+    "GENRE":              "Fantasy",   # Adult, Fantasy, Historical, Horror, Modern, None, or Science Fiction
+    "GAMEPLAY":           "Adventure",       # Adventure, Educational, Hack and Slash, None,
                                       # Player versus Player, Player versus Environment,
                                       # Roleplaying, Simulation, Social or Strategy
-    "STATUS":             "Open Beta",  # Alpha, Closed Beta, Open Beta, Live
+    "STATUS":             "Alpha",  # Alpha, Closed Beta, Open Beta, Live
     "GAMESYSTEM":         "Custom", # D&D, d20 System, World of Darkness, etc. Use Custom if homebrew
     "INTERMUD":           "IMC2",   # evennia supports IMC2.
     "SUBGENRE":           "None",   # LASG, Medieval Fantasy, World War II, Frankenstein,

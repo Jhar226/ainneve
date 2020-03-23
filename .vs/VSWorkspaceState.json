@@ -1,11 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\server",
-    "\\server\\conf",
-    "\\utils",
-    "\\world"
+    "\\web",
+    "\\web\\static_overrides",
+    "\\web\\static_overrides\\evennia_general\\css",
+    "\\web\\static_overrides\\evennia_general\\images",
+    "\\web\\template_overrides",
+    "\\web\\template_overrides\\evennia_general"
   ],
-  "SelectedNode": "\\server\\conf\\web_plugins.py",
+  "SelectedNode": "\\web\\template_overrides\\evennia_general\\README.md",
   "PreviewInSolutionExplorer": false
 }

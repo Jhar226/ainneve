@@ -32,7 +32,8 @@ from evennia.settings_default import *
 ######################################################################
 
 # This is the name of your game. Make it catchy!
-SERVERNAME = "Dimensions RPG Chat"
+SERVERNAME = "Dimensions RPG"
+GAME_SLOGAN = "RPG Chat Website"
 
 # Server ports. If enabled and marked as "visible", the port
 # should be visible to the outside world on a production server.

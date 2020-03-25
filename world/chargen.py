@@ -70,13 +70,13 @@ def menunode_welcome_archetypes(caller):
     text = dedent("""\
         |wWelcome to |mDimensions RPG|w, a MUSH/RPG chat built with |yEvennia|w.|n
 
-        To begin, select an |cArchetype|n.
+        To begin, select a |cClass|n.
 
-        Select an Archetype by number below to view its details, or |whelp|n
+        Select a class by number below to view its details, or |whelp|n
         at any time for more info.
     """)
-    help = fill("In |mAinneve|n, character |cArchetypes|n represent the "
-                "characters' class or primary role. The various archetypes "
+    help = fill("In |mDimensions|n, character |cClasses|n represent the "
+                "characters' archetype or primary role. The various classes "
                 "have different strengths and weaknesses, which are reflected "
                 "in your character's starting traits.")
     options = []

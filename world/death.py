@@ -70,7 +70,7 @@ class CharDeathHandler(DeathHandler):
 
     def returning(self):
         self.obj.msg(
-            "You feel a quickening in your energy as you feel pulled back toward |mAinneve|n.")
+            "You feel a quickening in your energy as you feel pulled back toward |mthe world...|n.")
         self.obj.home.msg_contents(
             "A sudden roar fills the chamber as the fire grows tall and the surface |/"
             "of the purple pool becomes agitated, spattering droplets into the air |/"

@@ -55,7 +55,7 @@ class ArchetypeException(Exception):
     def __init__(self, msg):
         self.msg = msg
 
-BASE_ARCHETYPES = ('Bard', 'Crusader', 'Soldier', 'Mage', 'Rogue', 'Priest')
+BASE_ARCHETYPES = ('Bard', 'Crusader', 'Soldier', 'Mage', 'Rogue', 'Priest', 'Battlemage')
 VALID_ARCHETYPES = BASE_ARCHETYPES
 
 PRIMARY_TRAITS = ('STR', 'PER', 'INT', 'DEX', 'CHA', 'VIT', 'MAG')
@@ -307,7 +307,6 @@ class Bard(Archetype):
         self.traits['INT']['base'] = 4
         self.traits['CHA']['base'] = 6
         self.traits['MAG']['base'] = 4
-        self.traits['MV']['base'] = 7
 
         self.health_roll = '1d8+6'
 
@@ -372,7 +371,7 @@ class Mage(Archetype):
         self.traits['MAG']['base'] = 6
         self.traits['SP']['mod'] = -2
         self.traits['WILL']['mod'] = 2
-        self.traits['MV']['base'] = 5
+        self.traits['MV']['base'] = 7
 
         self.health_roll = '1d6+6'
 
@@ -398,22 +397,22 @@ class Rogue(Archetype):
         self.health_roll = '1d8+8'
 
 
-class Priest(Archetype):
-    """Represents the Priest archetype."""
+class Battlemage(Archetype):
+    """Represents the Battlemage archetype."""
     def __init__(self):
-        super(Priest, self).__init__()
-        self.name = 'Priest'
+        super(Battlemage, self).__init__()
+        self.name = 'Battlemage'
         self.desc = fill(
-            "|cPriests|n are users of the divine, able to access their "
-            "power granted by their deity in order to enact their will, "
-            "and help allies while harming enemies of the faith. "
+            "|cBattlemages|n combine magic and martial prowess in order "
+            "to engage in combat. Their spellcasting usually being on par "
+            "with their martial combat. "
         )
 
         # set starting trait values
-        self.traits['CHA']['base'] = 6
-        self.traits['PER']['base'] = 6
+        self.traits['STR']['base'] = 6
+        self.traits['MAG']['base'] = 6
         self.traits['VIT']['base'] = 5
-        self.traits['WILL']['mod'] = -2
-        self.traits['MV']['base'] = 5
+        self.traits['DEX']['base'] = 5
+        self.traits['REFL']['mod'] = 2
 
-        self.health_roll = '1d6+8'
+        self.health_roll = '1d8+10'

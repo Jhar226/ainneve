@@ -379,7 +379,7 @@ class Mage(Archetype):
 class Rogue(Archetype):
     """Represents the Rogue archetype."""
     def __init__(self):
-        super(Mage, self).__init__()
+        super(Rogue, self).__init__()
         self.name = 'Rogue'
         self.desc = fill(
             "|cRogues|n are masters of stealth, subterfuge, and "
@@ -401,7 +401,7 @@ class Rogue(Archetype):
 class Priest(Archetype):
     """Represents the Priest archetype."""
     def __init__(self):
-        super(Mage, self).__init__()
+        super(Priest, self).__init__()
         self.name = 'Priest'
         self.desc = fill(
             "|cPriests|n are users of the divine, able to access their "
